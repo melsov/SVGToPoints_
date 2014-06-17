@@ -6,7 +6,7 @@ import java.awt.geom.PathIterator;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
-
+ 
 import com.kitfox.svg.SVGCache;
 import com.kitfox.svg.SVGDiagram;
 import com.kitfox.svg.SVGElement;
