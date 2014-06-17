@@ -147,9 +147,7 @@ public class SVGToPointt {
 				p = p.minus(minPoint);
 				p = p.multiply(proportion);
 				p = p.plus(newMin);
-//				p = new Pointt();
 				points.set(i, p);
-				
 			}
 			minPoint = newMin;
 			maxPoint = newMax;
