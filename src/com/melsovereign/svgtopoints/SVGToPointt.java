@@ -11,6 +11,11 @@ import com.kitfox.svg.SVGCache;
 import com.kitfox.svg.SVGDiagram;
 import com.kitfox.svg.SVGElement;
 
+/*
+ * Converts SVG data to a flat list of Pointts.
+ * Pointt is a custom vector class that could
+ * be substituted without too much work.
+ */
 public class SVGToPointt {
 	
 	PointtSet pointSet = new PointtSet();
@@ -96,6 +101,9 @@ public class SVGToPointt {
 		return pointSet;
 	}
 	
+	/*
+	 * Scalable point set.
+	 */
 	public class PointtSet
 	{
 		private List<Pointt> points = null;
