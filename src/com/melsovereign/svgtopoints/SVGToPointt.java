@@ -15,7 +15,7 @@ import com.kitfox.svg.SVGElement;
  * Converts SVG data to a flat list of Pointts.
  * Pointt is a custom vector class that could
  * be substituted without too much work.
- * Uses the SVG Salamander.
+ * Uses the SVG Salamander library.
  * Point conversion technique from: http://blog.gemserk.com/2011/03/03/svg-path-traversal-in-java/
  */
 public class SVGToPointt {
