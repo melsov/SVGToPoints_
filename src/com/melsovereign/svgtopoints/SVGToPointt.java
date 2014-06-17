@@ -134,22 +134,27 @@ public class SVGToPointt {
 			return maxPoint;
 		}
 		
-		public void scaleToFitNewMinMax(Pointt newMin, Pointt newMax) {
+		public ArrayList<Pointt> scaleToFitNewMinMax(Pointt newMin, Pointt newMax) {
 			Pointt newDim = newMax.minus(newMin);
 			Pointt oldDim = maxPoint.minus(minPoint);
 			
 			double proportion = newDim.y/oldDim.y;
 			double proportionx = newDim.x /oldDim.x;
 			proportion = (proportion > proportionx ) ? proportionx : proportion;
-			Pointt translate = newMin.minus(minPoint);
 			
-			for (Pointt p : points) {
+			for (int i=0; i < points.size(); ++i) {
+				Pointt p = points.get(i);
 				p = p.minus(minPoint);
 				p = p.multiply(proportion);
 				p = p.plus(newMin);
+//				p = new Pointt();
+				points.set(i, p);
+				
 			}
 			minPoint = newMin;
 			maxPoint = newMax;
+			
+			return (ArrayList<Pointt>) points;
 			
 		}
 	}
